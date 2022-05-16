@@ -55,7 +55,8 @@ include "config.php";
             <br>
             <div class="mt-4">
                 <button type="submit" class="btn btn-primary" name="save">Enregistrer</button> &nbsp;
-                <a href="./view.php">Liste des contacts</a>
+                <a href="./view.php" class="btn btn-primary">Liste des contacts</a>
+                <a href="./search.php" class="btn btn-primary">Effectuer une recherche</a>
                
             </div>
 

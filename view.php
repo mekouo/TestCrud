@@ -22,20 +22,6 @@ $result = $conn->query($sql);
 
 
 
-<script type="text/javascript">
-
-function testConfirmDialog()  {
-
-     
-           if (confirm("voulez-vous continuer?")) {
-                return true;
-             } else {
-                  return false; 
-                } 
-            }
-
-
-</script>
 
 
 
@@ -65,7 +51,7 @@ function testConfirmDialog()  {
 					<td><?php echo $row['nom']; ?></td>
 					<td><?php echo $row['prenom']; ?></td>				
 					<td><a class="btn btn-info" href="update.php?id=<?php echo $row['id']; ?>">Edit</a>&nbsp;
-					<a onclick="testConfirmDialog()" class="btn btn-danger" href="delete.php?id=<?php echo $row['id']; ?>">Delete</a></td>
+					<a onclick="return confirm('êtes vous sur de vouloir supprimer cette ligne ?')" class="btn btn-danger" href="delete.php?id=<?php echo $row['id']; ?>">Delete</a></td>
 					</tr>	
 					
 		<?php		}
@@ -76,9 +62,9 @@ function testConfirmDialog()  {
 </table>
 	</div>
 
-  
-
-
+  <div class="mt-4">
+	<a href="./index.php" class="btn btn-primary">Retour</a>
+  </div>
 
    </body>
 </html>
